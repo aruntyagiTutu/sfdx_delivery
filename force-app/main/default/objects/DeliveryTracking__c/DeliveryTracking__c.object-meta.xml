@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Delivery Tracking</label>
+    <pluralLabel>Delivery Trackings</pluralLabel>
+    <nameField>
+        <type>AutoNumber</type>
+        <label>Delivery Tracking Number</label>
+        <displayFormat>DT-{0000}</displayFormat>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <fields>
+        <fullName>PickupAddress__c</fullName>
+        <label>Pickup Address</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>DropAddress__c</fullName>
+        <label>Drop Address</label>
+        <type>Text</type>
+        <length>255</length>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <label>Status</label>
+        <type>Picklist</type>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Transit</fullName>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Delivered</fullName>
+            </picklistValues>
+        </picklist>
+    </fields>
+</CustomObject>
