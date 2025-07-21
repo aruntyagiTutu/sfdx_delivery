@@ -1,8 +1,12 @@
 public class OrderService {
     public static Decimal calculateDiscount(Order__c order) {
+        Decimal discount = 0;
         if (order.Quantity__c > 100) {
-            return 20;
+            discount += 20;
         }
-        return 0;
+        if (order.LoyalCustomer__c) {
+            discount += 10;
+        }
+        return discount;
     }
 }
