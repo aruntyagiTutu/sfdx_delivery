@@ -5,6 +5,7 @@ public class NotificationService {
         Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
         mail.setToAddresses(new String[] { email });
         mail.setSubject('Notification');
+        message += ' this is server notification';
         mail.setPlainTextBody(message);
         Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
     }
