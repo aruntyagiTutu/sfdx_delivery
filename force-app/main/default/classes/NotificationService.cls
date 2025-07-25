@@ -1,12 +1,16 @@
 public class NotificationService {
     public static void sendNotification(String userId, String message) {
-        // Send SMS (assume external SMS service)
-        String phoneNumber = getUserPhone(userId);
-        SmsUtility.sendSms(phoneNumber, message);
+        // Send Email
+        String email = getUserEmail(userId);
+        Messaging.SingleEmailMessage mail = new Messaging.SingleEmailMessage();
+        mail.setToAddresses(new String[] { email });
+        mail.setSubject('Notification');
+        mail.setPlainTextBody(message);
+        Messaging.sendEmail(new Messaging.SingleEmailMessage[] { mail });
     }
 
-    private static String getUserPhone(String userId) {
-        User u = [SELECT MobilePhone FROM User WHERE Id = :userId LIMIT 1];
-        return u.MobilePhone;
+    private static String getUserEmail(String userId) {
+        User u = [SELECT Email FROM User WHERE Id = :userId LIMIT 1];
+        return u.Email;
     }
 }
