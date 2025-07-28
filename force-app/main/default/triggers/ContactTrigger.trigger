@@ -3,8 +3,8 @@ trigger ContactTrigger on Contact (before insert) {
         if (con.LastName == 'Test') {
             con.addError('Contact last name "Test" is not allowed in this org.');
         }
-        if (con.LastName == 'Sample') {
-            con.addError('Contact last name "Sample" is not allowed.');
+        if (String.isBlank(con.Phone)) {
+            con.addError('Phone number is required.');
         }
     }
 }
