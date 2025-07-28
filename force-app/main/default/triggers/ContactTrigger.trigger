@@ -3,6 +3,8 @@ trigger ContactTrigger on Contact (before insert) {
         if (con.LastName == 'Test') {
             con.addError('Contact last name "Test" is not allowed in this org.');
         }
-        con.LeadSource = 'Web';
+        if (con.LastName == 'Sample') {
+            con.addError('Contact last name "Sample" is not allowed.');
+        }
     }
 }
