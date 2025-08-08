@@ -1,6 +1,6 @@
 public class OrderService {
-    public static Decimal calculateDiscount(Order__c order) {
-        return 0;
-        
+    public static Decimal applyDiscount(String customerType, Decimal orderAmount) {
+        Decimal discount = DiscountCalculator.calculateDiscount(customerType, orderAmount);
+        return orderAmount - discount;
     }
 }
