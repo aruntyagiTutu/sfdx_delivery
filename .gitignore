@@ -1,1 +1,3 @@
 .sfdx/tools/vector-db/
+.sf/
+.sfdx/sfdx-config.json
