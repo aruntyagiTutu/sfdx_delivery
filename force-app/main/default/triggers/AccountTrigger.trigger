@@ -1,7 +1,7 @@
 trigger AccountTrigger on Account (before insert) {
     for (Account acc : Trigger.new) {
-        if (acc.Name == 'WI something') {
-            acc.addError('Account name "WI" is not allowed in this org something something.');
+        if (acc.Name == 'axe') {
+            acc.addError('Account name "axe" is not allowed in this org.');
         }
 
 
