@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Tool Inventory</label>
+    <pluralLabel>Tool Inventories</pluralLabel>
+    <nameField>
+        <label>Tool Inventory Name</label>
+        <type>Text</type>
+    </nameField>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <sharingModel>ReadWrite</sharingModel>
+    <fields>
+        <fullName>Tool_Name__c</fullName>
+        <label>Tool Name</label>
+        <type>Text</type>
+        <length>80</length>
+        <required>true</required>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <label>Category</label>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Hand</fullName>
+                    <default>true</default>
+                </value>
+                <value>
+                    <fullName>Power</fullName>
+                </value>
+                <value>
+                    <fullName>Measuring</fullName>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Quantity__c</fullName>
+        <label>Quantity</label>
+        <type>Number</type>
+        <precision>18</precision>
+        <scale>0</scale>
+        <defaultValue>0</defaultValue>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <label>Location</label>
+        <type>Text</type>
+        <length>100</length>
+    </fields>
+    <fields>
+        <fullName>In_Service__c</fullName>
+        <label>In Service</label>
+        <type>Checkbox</type>
+        <defaultValue>true</defaultValue>
+    </fields>
+</CustomObject>
+
+
