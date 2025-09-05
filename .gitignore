@@ -2,3 +2,5 @@
 .sfdx/tools/256/apex.db
 .sfdx/sfdx-config.json
 .sf/config.json
+.sf
+.sfdx
